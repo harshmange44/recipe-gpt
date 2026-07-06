@@ -87,7 +87,17 @@ For a quick test run (2 minutes):
 python train.py --max_iters 500 --n_layer 2 --n_embd 128
 ```
 
-### 4. Generate recipes
+### 4. Cloud Training (Google Colab)
+
+If you don't want to heat up your local machine, you can train for free on Google Colab's T4 GPUs.
+
+1. Upload the `colab_training.ipynb` file to Google Colab.
+2. Run the cells. It will automatically:
+   - Mount your Google Drive to save checkpoints safely.
+   - Clone this repository.
+   - Run the training loop using CUDA and `torch.compile` for a massive speed boost.
+
+### 5. Generate recipes
 
 ```bash
 python sample.py
